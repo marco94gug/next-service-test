@@ -8,7 +8,6 @@ export function useUsersService(): any {
     age: 0,
   });
   const [usersState, setUsers] = useState<Users>([]);
-  const [service, setService] = useState({});
 
   class UsersService {
     static _user = userState;
