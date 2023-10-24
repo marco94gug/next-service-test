@@ -10,21 +10,20 @@ export function useUsersService(): any {
   const [usersState, setUsers] = useState<Users>([]);
 
   class UsersService {
-    static _user = userState;
-    static _users: Users = usersState;
+    _user = userState;
+    _users: Users = usersState;
 
     get user() {
-      return UsersService._user;
+      return this._user;
     }
 
     get users() {
-      return usersState;
+      return this._users;
     }
 
     set user(user: User) {
       setUser(user);
       setUsers((prev) => [...prev, user]);
-      UsersService._user = userState;
     }
 
     set users(users: Users) {
