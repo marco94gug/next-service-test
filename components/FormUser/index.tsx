@@ -18,14 +18,14 @@ export default function FormUser() {
       <label htmlFor="name">Name</label>
       <input
         type="text"
-        name="name"
+        id="name"
         placeholder="Insert your name"
         onChange={(e) => setUser((prev) => ({ ...prev, name: e.target.value }))}
       />
       <label htmlFor="lastName">Last Name</label>
       <input
         type="text"
-        name="lastname"
+        id="lastname"
         placeholder="Insert your lastname"
         onChange={(e) =>
           setUser((prev) => ({ ...prev, lastname: e.target.value }))
@@ -34,6 +34,7 @@ export default function FormUser() {
       <label htmlFor="age">Age</label>
       <input
         type="number"
+        id="age"
         placeholder="Age"
         onChange={(e) => setUser((prev) => ({ ...prev, age: +e.target.value }))}
       />

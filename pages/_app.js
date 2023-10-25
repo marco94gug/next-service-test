@@ -11,7 +11,7 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <ServiceContext.Provider value={userInterfaceService}>
-        <Component {...pageProps} />;
+        <Component {...pageProps} />
       </ServiceContext.Provider>
     </>
   );
